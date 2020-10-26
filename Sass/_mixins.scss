@@ -1,0 +1,9 @@
+// ---------- Mixins ----------
+@mixin box-shadow-styling($property) {
+  -webkit-box-shadow: $property;
+  -moz-box-shadow: $property;
+  box-shadow: $property;
+}
+@mixin section-box-shadow {
+  @include box-shadow-styling(10px 10px 19px -4px rgba(255, 255, 255, 0.75));
+}

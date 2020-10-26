@@ -1,23 +1,8 @@
+@import '_mixins';
+
 // ---------- Variables ----------
-
-// Colors
-$background-color-success: green;
-$background-color-warning: orange;
-$background-color-error: red;
-
-$background-color: #000;
-$text-color: #2748b3;
-$header-color: #6b8eff;
-
 $padding-size: 16px;
 $margin-size: 16px;
-
-// ---------- Mixins ----------
-@mixin box-shadow-styling {
-  -webkit-box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
-  -moz-box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
-  box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
-}
 
 body {
   font: 100% 'Space Mono', monospace;
@@ -47,7 +32,7 @@ article {
   flex-wrap: wrap;
 
   section {
-    @include box-shadow-styling;
+    @include section-box-shadow;
     flex-grow: 1;
     flex-basis: 45%;
     border: 1px silver solid;
@@ -126,5 +111,5 @@ h6 {
 
 .warning {
   @extend .message;
-  background-color: background-color-warning;
+  background-color: $background-color-warning;
 }
