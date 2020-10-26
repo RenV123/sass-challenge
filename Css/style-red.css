@@ -85,18 +85,18 @@ h6 {
   padding: 16px;
   margin: 16px;
   color: #b32727;
-  background-color: #000;
+  background: #000;
 }
 
 .success {
-  background-color: #004105;
+  background: #004105;
 }
 
 .error {
-  background-color: #350000;
+  background: #350000;
 }
 
 .warning {
-  background-color: #af5d00;
+  background: #af5d00;
 }
 /*# sourceMappingURL=style-red.css.map */

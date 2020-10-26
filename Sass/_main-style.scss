@@ -86,20 +86,20 @@ h6 {
   padding: $padding-size;
   margin: $margin-size;
   color: $text-color;
-  background-color: $background-color;
+  background: $background-color;
 }
 
 .success {
   @extend .message;
-  background-color: $background-color-success;
+  background: $background-color-success;
 }
 
 .error {
   @extend .message;
-  background-color: $background-color-error;
+  background: $background-color-error;
 }
 
 .warning {
   @extend .message;
-  background-color: $background-color-warning;
+  background: $background-color-warning;
 }
