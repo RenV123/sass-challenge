@@ -1,0 +1,93 @@
+@import '_mixins'
+
+// ---------- Variables ----------
+$padding-size: 16px
+$margin-size: 16px
+
+body 
+  font: 100% 'Space Mono', monospace
+  color: $text-color
+  margin: 0px
+  padding: 0px
+  background: radial-gradient(#fff, #ffffff33 2px, #00000000 40px) fixed 0 0 / 550px 550px, radial-gradient(#fff, #ffffff26 1px, #00000000 30px) fixed 40px 60px / 350px 350px, radial-gradient(#fff, #ffffff19 2px, #00000000 40px) fixed 130px 270px / 250px 250px, radial-gradient(#ffffff66, #ffffff19 2px, #00000000 30px) fixed 70px 100px / 150px 150px #000
+
+article 
+  display: flex
+  flex-wrap: wrap
+
+  section 
+    @include section-box-shadow
+    flex-grow: 1
+    flex-basis: 45%
+    border: 1px silver solid
+    padding: $padding-size
+    margin: $margin-size
+    clear: both
+    overflow: auto
+    box-sizing: border-box
+
+    #selling-points 
+      flex-grow: 2
+      flex-basis: 100%
+
+  pre 
+    background: $background-color
+    border: 1px solid #ddd
+    color: #666
+    font: 15px monospace
+    line-height: 1.6
+    margin-bottom: 1.6em
+    max-width: 100%
+    overflow: auto
+    padding: $padding-size
+    display: block
+    white-space: pre-wrap
+
+    .before 
+      float: left
+      width: 40%
+    
+
+    .after 
+      float: right
+      width: 40%
+
+h1,
+h2,
+h6 
+  color: $header-color
+
+
+h1,
+h6
+  text-align: center
+
+
+h6
+  font-size: 2em
+  padding: $padding-size * 2
+  margin-bottom: 0px
+
+
+.message
+  border: 1px solid #ccc
+  padding: $padding-size
+  margin: $margin-size
+  color: $text-color
+  background: $background-color
+
+
+.success
+  @extend .message
+  background: $background-color-success
+
+
+.error
+  @extend .message
+  background: $background-color-error
+
+
+.warning
+  @extend .message
+  background: $background-color-warning
+
