@@ -4,9 +4,20 @@
 $padding-size: 16px;
 $margin-size: 16px;
 
+//Css variables
+:root {
+  --text-color: #2748b3;
+  --background-color: #000;
+  --header-color: #6b8eff;
+
+  --background-color-error: red;
+  --background-color-warning: orange;
+  --background-color-success: green;
+}
+
 body {
   font: 100% 'Space Mono', monospace;
-  color: $text-color;
+  color: var(--text-color);
   margin: 0px;
   padding: 0px;
   background: radial-gradient(#fff, #ffffff33 2px, #00000000 40px) fixed 0 0/550px
@@ -15,7 +26,7 @@ body {
     radial-gradient(#fff, #ffffff19 2px, #00000000 40px) fixed 130px 270px/ 250px
       250px,
     radial-gradient(#ffffff66, #ffffff19 2px, #00000000 30px) fixed 70px 100px/ 150px
-      150px $background-color;
+      150px var(--background-color);
 }
 
 article {
@@ -40,7 +51,7 @@ article {
   }
 
   pre {
-    background: $background-color;
+    background: var(--background-color);
     border: 1px solid #ddd;
     color: #666;
     font: 15px monospace;
@@ -67,7 +78,7 @@ article {
 h1,
 h2,
 h6 {
-  color: $header-color;
+  color: var(--header-color);
 }
 
 h1,
@@ -85,21 +96,21 @@ h6 {
   border: 1px solid #ccc;
   padding: $padding-size;
   margin: $margin-size;
-  color: $text-color;
-  background: $background-color;
+  color: var(--text-color);
+  background: var(--background-color);
 }
 
 .success {
   @extend .message;
-  background: $background-color-success;
+  background: var(--background-color-success);
 }
 
 .error {
   @extend .message;
-  background: $background-color-error;
+  background: var(--background-color-error);
 }
 
 .warning {
   @extend .message;
-  background: $background-color-warning;
+  background: var(--background-color-warning);
 }

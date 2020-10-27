@@ -1,9 +1,18 @@
+:root {
+  --text-color: #2748b3;
+  --background-color: #000;
+  --header-color: #6b8eff;
+  --background-color-error: red;
+  --background-color-warning: orange;
+  --background-color-success: green;
+}
+
 body {
   font: 100% 'Space Mono', monospace;
-  color: #2748b3;
+  color: var(--text-color);
   margin: 0px;
   padding: 0px;
-  background: radial-gradient(#fff, #ffffff33 2px, #00000000 40px) fixed 0 0/550px 550px, radial-gradient(#fff, #ffffff26 1px, #00000000 30px) fixed 40px 60px/350px 350px, radial-gradient(#fff, #ffffff19 2px, #00000000 40px) fixed 130px 270px/250px 250px, radial-gradient(#ffffff66, #ffffff19 2px, #00000000 30px) fixed 70px 100px/150px 150px #000;
+  background: radial-gradient(#fff, #ffffff33 2px, #00000000 40px) fixed 0 0/550px 550px, radial-gradient(#fff, #ffffff26 1px, #00000000 30px) fixed 40px 60px/350px 350px, radial-gradient(#fff, #ffffff19 2px, #00000000 40px) fixed 130px 270px/250px 250px, radial-gradient(#ffffff66, #ffffff19 2px, #00000000 30px) fixed 70px 100px/150px 150px var(--background-color);
 }
 
 article {
@@ -40,7 +49,7 @@ article section #selling-points {
 }
 
 article pre {
-  background: #000;
+  background: var(--background-color);
   border: 1px solid #ddd;
   color: #666;
   font: 15px monospace;
@@ -66,7 +75,7 @@ article pre .after {
 h1,
 h2,
 h6 {
-  color: #6b8eff;
+  color: var(--header-color);
 }
 
 h1,
@@ -84,19 +93,19 @@ h6 {
   border: 1px solid #ccc;
   padding: 16px;
   margin: 16px;
-  color: #2748b3;
-  background: #000;
+  color: var(--text-color);
+  background: var(--background-color);
 }
 
 .success {
-  background: green;
+  background: var(--background-color-success);
 }
 
 .error {
-  background: red;
+  background: var(--background-color-error);
 }
 
 .warning {
-  background: orange;
+  background: var(--background-color-warning);
 }
-/*# sourceMappingURL=style-blue.css.map */
+/*# sourceMappingURL=style.css.map */

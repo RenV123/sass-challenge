@@ -10,7 +10,23 @@
 
     <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet" />
 
-    <link href="./Css/style-blue.min.css" type="text/css" rel="stylesheet" />
+    <link href="./Css/style.min.css" type="text/css" rel="stylesheet" />
+    <script>
+        function changeColor(color) {
+            if (color === 'red') {
+                document.documentElement.style.setProperty("--text-color", "#b32727");
+                document.documentElement.style.setProperty("--header-color", "#ff6b6b");
+
+                document.documentElement.style.setProperty("--background-color-error", "#350000");
+                document.documentElement.style.setProperty("--background-color-warning", "#af5d00");
+                document.documentElement.style.setProperty("--background-color-success", "#004105");
+            } else {
+                //Reinstate colors by reloading the page
+                location.reload();
+            }
+
+        }
+    </script>
 </head>
 
 <body>
@@ -20,8 +36,8 @@
 
     <article>
         <section id="links">
-            <a href="./index.html">Blue</a>
-            <a href="./index-red.html">Red</a>
+            <button onClick=changeColor('blue')>Blue</button>
+            <button onClick=changeColor('red')>Red</button>
         </section>
         <section id="selling-points">
             <h2>
